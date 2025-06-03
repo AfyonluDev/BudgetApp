@@ -7,8 +7,8 @@ import { toast } from "react-toastify";
 // helpers
 import { deleteItem } from "../helpers";
 
+//Nach dem logout sollen die userName, budgets und ausgaben gelöscht werden
 export async function logoutAction() {
-  // delete the user
   deleteItem({
     key: "userName"
   })
