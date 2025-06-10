@@ -14,8 +14,8 @@ const Nav = ({ userName }) => {
         to="/"
         aria-label="Go to home"
       >
-        <img src={logomark} alt="" height={30} />
-        <span>HomeBudget</span>
+        <img src={logomark} alt="" height={50} />
+        <span>Privat Budget</span>
       </NavLink>
       {
         userName && (
@@ -23,13 +23,13 @@ const Nav = ({ userName }) => {
             method="post"
             action="logout"
             onSubmit={(event) => {
-              if (!confirm("Delete user and all data?")) {
+              if (!confirm("Benutzerkonto löschen und alle dazugehörigen Daten?")) {
                 event.preventDefault()
               }
             }}
           >
             <button type="submit" className="btn btn--warning">
-              <span>Delete User</span>
+              <span>Benutzerkonto löschen</span>
               <TrashIcon width={20} />
             </button>
 
