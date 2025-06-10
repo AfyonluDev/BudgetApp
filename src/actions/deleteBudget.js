@@ -20,6 +20,7 @@ export function deleteBudget({ params }) {
       value: params.id,
     });
 
+    // löscht alle Ausgaben die im Budget enthalten sind, beim löschen des Budgets
     associatedExpenses.forEach((expense) => {
       deleteItem({
         key: "expenses",

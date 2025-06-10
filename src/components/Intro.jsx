@@ -11,21 +11,19 @@ const Intro = () => {
     <div className="intro">
       <div>
         <h1>
-          Take Control of <span className="accent">Your Money</span>
+          Behalte die Kontrolle über dein Geld.
         </h1>
-        <p>
-          Personal budgeting is the secret to financial freedom. Start your journey today.
-        </p>
+       
         <Form method="post">
           <input
             type="text"
             name="userName"
             required
-            placeholder="What is your name?" aria-label="Your Name" autoComplete="given-name"
+            placeholder="Wie ist dein Name?" aria-label="Your Name" autoComplete="given-name"
           />
           <input type="hidden" name="_action" value="newUser" />
           <button type="submit" className="btn btn--primary">
-            <span>Create Account</span>
+            <span>Benutzerkonto erstellen</span>
             <ArrowRightIcon width={20} />
           </button>
         </Form>
