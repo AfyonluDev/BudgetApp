@@ -432,11 +432,12 @@ select {
   border-bottom: 0.15em solid hsl(var(--bkg));
 }
 
+/* Die Lienen um Budget*/
 .form-wrapper::before {
   content: "";
   position: absolute;
   inset: 0.55rem;
-  border: 2px dashed hsl(var(--text));
+  border: 10px solid green;
   border-radius: calc(var(--round-lg) * 0.6);
   z-index: -1;
 }

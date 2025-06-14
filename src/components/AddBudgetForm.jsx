@@ -4,9 +4,6 @@ import { useEffect, useRef } from "react";
 // rrd imports
 import { Form, useFetcher } from "react-router-dom"
 
-// library imports
-import { CurrencyDollarIcon } from "@heroicons/react/24/solid"
-
 const AddBudgetForm = () => {
   const fetcher = useFetcher();
   const isSubmitting = fetcher.state === "submitting"
@@ -60,7 +57,6 @@ const AddBudgetForm = () => {
             isSubmitting ? <span>Submitting…</span> : (
               <>
                 <span>Budget erstellen</span>
-                <CurrencyDollarIcon width={20} />
               </>
             )
           }
