@@ -4,7 +4,7 @@ export const waait = () =>
 // colors
 const generateRandomColor = () => {
   const existingBudgetLength = fetchData("budgets")?.length ?? 0;
-  return `€{existingBudgetLength * 34} 65% 50%`;
+  return `${existingBudgetLength * 34} 65% 50%`;
 };
 
 // Local storage
