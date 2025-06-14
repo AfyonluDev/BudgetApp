@@ -26,10 +26,10 @@ const AddExpenseForm = ({ budgets }) => {
 
   return (
     <div className="form-wrapper">
-      <h2 className="h3">Add New{" "}<span className="accent">
+      <h2 className="h3">Neue{" "}<span className="accent">
         {budgets.length === 1 && `${budgets.map((budg) => budg.name)}`}
       </span>{" "}
-        Expense
+        Kosten hinzufügen
       </h2>
       <fetcher.Form
         method="post"
@@ -38,25 +38,25 @@ const AddExpenseForm = ({ budgets }) => {
       >
         <div className="expense-inputs">
           <div className="grid-xs">
-            <label htmlFor="newExpense">Expense Name</label>
+            <label htmlFor="newExpense">Name für die Ausgabe</label>
             <input
               type="text"
               name="newExpense"
               id="newExpense"
-              placeholder="e.g., Coffee"
+              placeholder="z.B., Kaffee"
               ref={focusRef}
               required
             />
           </div>
           <div className="grid-xs">
-            <label htmlFor="newExpenseAmount">Amount</label>
+            <label htmlFor="newExpenseAmount">Ausgabe Betrag</label>
             <input
               type="number"
               step="0.01"
               inputMode="decimal"
               name="newExpenseAmount"
               id="newExpenseAmount"
-              placeholder="e.g., 3.50"
+              placeholder="z.B., 4,50"
               required
             />
           </div>
@@ -82,7 +82,7 @@ const AddExpenseForm = ({ budgets }) => {
           {
             isSubmitting ? <span>Submitting…</span> : (
               <>
-                <span>Add Expense</span>
+                <span>Ausgabe hinzufügen</span>
                 <PlusCircleIcon width={20} />
               </>
             )
