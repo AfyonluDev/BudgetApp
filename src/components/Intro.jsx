@@ -15,14 +15,19 @@ const Intro = () => {
         </h1>
        
         <Form method="post">
-          <input
-            type="text"
-            name="userName"
-            required
-            placeholder="Wie ist dein Name?" aria-label="Your Name" autoComplete="given-name"
-          />
+          <div className="form-control">
+            <input
+              type="text"
+              name="userName"
+              id="userName" // ID ist wichtig, um mit dem Label zu verbinden
+              required
+              placeholder=" " // Wichtig: Placeholder ist nur ein Leerzeichen
+              autoComplete="given-name"
+            />
+            <label htmlFor="userName">Wie ist dein Name?</label>
+          </div>
           <input type="hidden" name="_action" value="newUser" />
-          <button type="submit" className="btn btn--primary">
+          <button type="submit" className="btn btn--primary btn--pill">
             <span>Benutzerkonto erstellen</span>
             <ArrowRightIcon width={20} />
           </button>

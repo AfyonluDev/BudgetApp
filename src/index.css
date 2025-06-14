@@ -603,3 +603,54 @@ table a {
 .Toastify__toast-body {
   font-size: var(--fs-300);
 }
+
+
+/* Macht den Button pillenförmig */
+.btn--pill {
+  border-radius: 9999px; /* Ein hoher Wert stellt sicher, dass die Enden immer perfekt rund sind */
+}
+
+/* Container für das Input-Feld und das Label */
+.form-control {
+  position: relative;
+  margin-bottom: 1.5rem; /* Etwas Abstand zum Button */
+}
+
+.form-control input {
+  /* Grund-Styling des Input-Feldes */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 100%;
+  font-size: 1rem;
+  transition: border-color 0.2s ease-in-out;
+}
+
+/* die nächsten drei functionen ändern den eingabefeld, in etwas hippiges*/
+.form-control label {
+  /* Styling und Positionierung des Labels */
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  transform: translateY(-50%);
+  background: white; /* Muss die Hintergrundfarbe der Seite haben */
+  padding: 0 0.25rem;
+  color: #888;
+  pointer-events: none; /* Wichtig, damit Klicks zum Input durchgehen */
+  transition: all 0.2s ease-in-out;
+}
+
+/* Die Magie passiert hier! */
+/* Wenn der User in das Feld klickt (focus) ODER wenn das Feld Text enthält (nicht den leeren Placeholder anzeigt) */
+.form-control input:focus + label,
+.form-control input:not(:placeholder-shown) + label {
+  top: 0;
+  font-size: 0.8rem;
+  color: #333; /* Kann z.B. die Farbe deines Haupt-Buttons sein */
+}
+
+/* Optional: Rahmenfarbe beim Fokussieren ändern */
+.form-control input:focus {
+  outline: none;
+  border-color: #4f46e5; /* Eine Akzentfarbe deiner Wahl */
+}
