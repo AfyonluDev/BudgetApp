@@ -45,7 +45,7 @@ export async function budgetAction({ request }) {
         amount: values.newExpenseAmount,
         budgetId: values.newExpenseBudget,
       });
-      return toast.success(`Expense ${values.newExpense} created!`);
+      return toast.success(`Ausgabe ${values.newExpense} wurde hinzugefügt!`);
     } catch (e) {
       throw new Error("There was a problem creating your expense.");
     }
@@ -57,7 +57,7 @@ export async function budgetAction({ request }) {
         key: "expenses",
         id: values.expenseId,
       });
-      return toast.success("Expense deleted!");
+      return toast.success("Ausgabe wurde gelöscht!");
     } catch (e) {
       throw new Error("There was a problem deleting your expense.");
     }
@@ -75,7 +75,7 @@ const BudgetPage = () => {
       }}
     >
       <h1 className="h2">
-        <span className="accent">{budget.name}</span> Overview
+        <span className="accent">{budget.name}</span> Übersicht
       </h1>
       <div className="flex-lg">
         <BudgetItem budget={budget} showDelete={true} />
@@ -84,7 +84,7 @@ const BudgetPage = () => {
       {expenses && expenses.length > 0 && (
         <div className="grid-md">
           <h2>
-            <span className="accent">{budget.name}</span> Expenses
+            <span className="accent">{budget.name}</span> Ausgaben
           </h2>
           <Table expenses={expenses} showBudget={false} />
         </div>

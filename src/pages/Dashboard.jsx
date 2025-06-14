@@ -39,7 +39,7 @@ export async function dashboardAction({ request }) {
   if (_action === "newUser") {
     try {
       localStorage.setItem("userName", JSON.stringify(values.userName));
-      return toast.success(`Welcome, ${values.userName}`);
+      return toast.success(`Herzlich wilkommen, ${values.userName}`);
     } catch (e) {
       throw new Error("There was a problem creating your account.");
     }
@@ -51,7 +51,7 @@ export async function dashboardAction({ request }) {
         name: values.newBudget,
         amount: values.newBudgetAmount,
       });
-      return toast.success("Budget created!");
+      return toast.success("Budget wurde erstellt!");
     } catch (e) {
       throw new Error("There was a problem creating your budget.");
     }
@@ -64,7 +64,7 @@ export async function dashboardAction({ request }) {
         amount: values.newExpenseAmount,
         budgetId: values.newExpenseBudget,
       });
-      return toast.success(`Expense ${values.newExpense} created!`);
+      return toast.success(`Die Ausgabe ${values.newExpense} wurde hinzugefügt!`);
     } catch (e) {
       throw new Error("There was a problem creating your expense.");
     }
@@ -76,7 +76,7 @@ export async function dashboardAction({ request }) {
         key: "expenses",
         id: values.expenseId,
       });
-      return toast.success("Expense deleted!");
+      return toast.success("Ausgabe wurde gelöscht!");
     } catch (e) {
       throw new Error("There was a problem deleting your expense.");
     }
@@ -108,7 +108,7 @@ const Dashboard = () => {
                 </div>
                 {expenses && expenses.length > 0 && (
                   <div className="grid-md">
-                    <h2>Recent Expenses</h2>
+                    <h2>Die aktuellen Ausgaben</h2>
                     <Table
                       expenses={expenses
                         .sort((a, b) => b.createdAt - a.createdAt)

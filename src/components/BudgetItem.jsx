@@ -41,7 +41,7 @@ const BudgetItem = ({ budget, showDelete = false }) => {
             onSubmit={(event) => {
               if (
                 !confirm(
-                  "Are you sure you want to permanently delete this budget?"
+                  "Sind Sie sicher das Sie dieses Budget löschen möchten?"
                 )
               ) {
                 event.preventDefault(); // React methode
@@ -49,7 +49,7 @@ const BudgetItem = ({ budget, showDelete = false }) => {
             }}
           >
             <button type="submit" className="btn">
-              <span>Delete Budget</span>
+              <span>Budget löschen</span>
               <TrashIcon width={20} />
             </button>
           </Form>
@@ -57,7 +57,7 @@ const BudgetItem = ({ budget, showDelete = false }) => {
       ) : (
         <div className="flex-sm">
           <Link to={`/budget/${id}`} className="btn">
-            <span>View Details</span>
+            <span>Detail Ansicht</span>
             <BanknotesIcon width={20} />
           </Link>
         </div>
