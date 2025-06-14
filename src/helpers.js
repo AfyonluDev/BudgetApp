@@ -4,7 +4,7 @@ export const waait = () =>
 // colors
 const generateRandomColor = () => {
   const existingBudgetLength = fetchData("budgets")?.length ?? 0;
-  return `${existingBudgetLength * 34} 65% 50%`;
+  return `€{existingBudgetLength * 34} 65% 50%`;
 };
 
 // Local storage
@@ -89,6 +89,6 @@ export const formatPercentage = (amt) => {
 export const formatCurrency = (amt) => {
   return amt.toLocaleString(undefined, {
     style: "currency",
-    currency: "USD",
+    currency: "EUR",
   });
 };

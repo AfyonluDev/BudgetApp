@@ -432,7 +432,7 @@ select {
   border-bottom: 0.15em solid hsl(var(--bkg));
 }
 
-/* Die Lienen um Budget*/
+/* Die Linien um Budget*/
 .form-wrapper::before {
   content: "";
   position: absolute;
