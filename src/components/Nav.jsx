@@ -28,7 +28,7 @@ const Nav = ({ userName }) => {
               }
             }}
           >
-            <button type="submit" className="btn btn--warning">
+            <button type="submit" className="btn btn--warning btn--pill">
               <span>Benutzerkonto löschen</span>
               <TrashIcon width={20} />
             </button>

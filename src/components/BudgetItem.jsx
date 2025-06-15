@@ -1,8 +1,9 @@
 // rrd imports
 import { Form, Link } from "react-router-dom";
 
-// library imports
-import { BanknotesIcon, TrashIcon } from "@heroicons/react/24/outline";
+
+// bibliothek für zeichen auf dne Button
+import { BanknotesIcon, TrashIcon, XCircleIcon, MinusCircleIcon , MagnifyingGlassIcon, DocumentTextIcon, EyeIcon, ArrowRightCircleIcon} from "@heroicons/react/24/outline"; 
 
 // helper functions
 import {
@@ -48,17 +49,17 @@ const BudgetItem = ({ budget, showDelete = false }) => {
               }
             }}
           >
-            <button type="submit" className="btn">
+            <button type="submit" className="btn btn--pill">
               <span>Budget löschen</span>
-              <TrashIcon width={20} />
+              <XCircleIcon  width={20} />
             </button>
           </Form>
         </div>
       ) : (
         <div className="flex-sm">
-          <Link to={`/budget/${id}`} className="btn">
+          <Link to={`/budget/${id}`} className="btn btn--pill">
             <span>Detail Ansicht</span>
-            <BanknotesIcon width={20} />
+            <MagnifyingGlassIcon width={20} />
           </Link>
         </div>
       )}
