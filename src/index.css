@@ -654,3 +654,31 @@ table a {
   outline: none;
   border-color: #4f46e5; /* Eine Akzentfarbe deiner Wahl */
 }
+
+
+/* Beispiel CSS für btn--custom-color */
+.btn--custom-color {
+  background-color: #ff5733; /* Eine Beispiel-Farbe (z.B. ein Orangeton) */
+  color: white; /* Textfarbe */
+  border: 2px solid #ff5733; /* Optional: Rahmenfarbe passend zum Hintergrund */
+}
+
+.btn--custom-color:hover {
+  background-color: #e04e2b; /* Eine dunklere Farbe für den Hover-Effekt */
+  border-color: #e04e2b;
+}
+
+/* Du musst auch sicherstellen, dass diese Stile die bestehenden Stile überschreiben,
+   falls nötig. Manchmal musst du die Spezifität erhöhen, z.B. so: */
+.btn.btn--custom-color {
+  /* Gleiche Stile wie oben */
+  background-color: #ff5733;
+  color: white;
+  border: 2px solid #ff5733;
+}
+
+.btn.btn--custom-color:hover {
+  /* Gleiche Stile wie oben */
+  background-color: #e04e2b;
+  border-color: #e04e2b;
+}

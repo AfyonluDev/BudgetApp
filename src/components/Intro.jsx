@@ -27,7 +27,7 @@ const Intro = () => {
             <label htmlFor="userName">Wie ist dein Name?</label>
           </div>
           <input type="hidden" name="_action" value="newUser" />
-          <button type="submit" className="btn btn--primary btn--pill">
+          <button type="submit" className="btn btn--custom-color btn--pill">
             <span>Benutzerkonto erstellen</span>
             <ArrowRightIcon width={20} />
           </button>
