@@ -1,27 +1,39 @@
+import React, { useState, useEffect } from 'react';
 import { Form } from "react-router-dom"
-
-// library
 import { UserPlusIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
-
-// assets
 import illustration from "../assets/illustration.jpg"
 
 const Intro = () => {
+  const textToAnimate = "Behalte die Kontrolle über dein Geld.";
+  const [displayedText, setDisplayedText] = useState("");
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    if (index < textToAnimate.length) {
+      const timeoutId = setTimeout(() => {
+        setDisplayedText((prev) => prev + textToAnimate[index]);
+        setIndex((prev) => prev + 1);
+      }, 100); // Verzögerung in Millisekunden für jeden Buchstaben
+
+      return () => clearTimeout(timeoutId);
+    }
+  }, [index, textToAnimate]);
+
   return (
     <div className="intro">
       <div>
         <h1>
-          Behalte die Kontrolle über dein Geld.
+          {displayedText}
         </h1>
-       
+
         <Form method="post">
           <div className="form-control">
             <input
               type="text"
               name="userName"
-              id="userName" // ID ist wichtig, um mit dem Label zu verbinden
+              id="userName"
               required
-              placeholder=" " // Wichtig: Placeholder ist nur ein Leerzeichen
+              placeholder=" "
               autoComplete="given-name"
             />
             <label htmlFor="userName">Wie ist dein Name?</label>
@@ -37,4 +49,5 @@ const Intro = () => {
     </div>
   )
 }
-export default Intro
+
+export default Intro;
