@@ -3,7 +3,7 @@ import { Form, Link } from "react-router-dom";
 
 
 // bibliothek für zeichen auf dne Button
-import { BanknotesIcon, TrashIcon, XCircleIcon, MinusCircleIcon , MagnifyingGlassIcon, DocumentTextIcon, EyeIcon, ArrowRightCircleIcon} from "@heroicons/react/24/outline"; 
+import { BanknotesIcon, TrashIcon, XCircleIcon, MinusCircleIcon , MagnifyingGlassIcon, DocumentTextIcon, EyeIcon, ArrowRightCircleIcon, DocumentMagnifyingGlassIcon, XMarkIcon} from "@heroicons/react/24/outline"; 
 
 // helper functions
 import {
@@ -51,7 +51,7 @@ const BudgetItem = ({ budget, showDelete = false }) => {
           >
             <button type="submit" className="btn btn--pill">
               <span>Budget löschen</span>
-              <XCircleIcon  width={20} />
+              <XMarkIcon  width={20} />
             </button>
           </Form>
         </div>
@@ -59,7 +59,7 @@ const BudgetItem = ({ budget, showDelete = false }) => {
         <div className="flex-sm">
           <Link to={`/budget/${id}`} className="btn btn--pill">
             <span>Detail Ansicht</span>
-            <MagnifyingGlassIcon width={20} />
+            <DocumentMagnifyingGlassIcon width={35} />
           </Link>
         </div>
       )}

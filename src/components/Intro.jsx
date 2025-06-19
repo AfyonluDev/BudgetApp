@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Form } from "react-router-dom"
-import { UserPlusIcon, ArrowRightIcon } from "@heroicons/react/24/solid";
+import { UserPlusIcon, ArrowRightIcon, FaceSmileIcon, CreditCardIcon, ForwardIcon  } from "@heroicons/react/24/solid";
 import illustration from "../assets/illustration.jpg"
 
 const Intro = () => {
@@ -41,7 +41,7 @@ const Intro = () => {
           <input type="hidden" name="_action" value="newUser" />
           <button type="submit" className="btn btn--custom-color btn--pill">
             <span>Benutzerkonto erstellen</span>
-            <ArrowRightIcon width={20} />
+            <FaceSmileIcon  width={20} />
           </button>
         </Form>
       </div>
@@ -51,3 +51,4 @@ const Intro = () => {
 }
 
 export default Intro;
+

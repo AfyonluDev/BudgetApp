@@ -2,7 +2,7 @@
 import { Form, NavLink } from "react-router-dom"
 
 // library
-import { TrashIcon } from '@heroicons/react/24/solid'
+import { TrashIcon, UserMinusIcon } from '@heroicons/react/24/solid'
 
 // assets
 import logomark from "../assets/logomark.svg"
@@ -30,7 +30,7 @@ const Nav = ({ userName }) => {
           >
             <button type="submit" className="btn btn--warning btn--pill">
               <span>Benutzerkonto löschen</span>
-              <TrashIcon width={20} />
+              <UserMinusIcon width={20} />
             </button>
 
           </Form>

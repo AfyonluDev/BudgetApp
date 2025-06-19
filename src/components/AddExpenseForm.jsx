@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react"
 import { useFetcher } from "react-router-dom"
 
 // library imports
-import { PlusCircleIcon } from "@heroicons/react/24/solid"
+import { PlusCircleIcon,DocumentCurrencyEuroIcon, BanknotesIcon, FaceSmileIcon, CreditCardIcon, ShoppingBagIcon, WalletIcon } from "@heroicons/react/24/solid"
 
 const AddExpenseForm = ({ budgets }) => {
   const fetcher = useFetcher()
@@ -83,7 +83,7 @@ const AddExpenseForm = ({ budgets }) => {
             isSubmitting ? <span>Submitting…</span> : (
               <>
                 <span>Ausgabe hinzufügen</span>
-                <PlusCircleIcon width={20} />
+                <ShoppingBagIcon width={20} />
               </>
             )
           }
